@@ -1,0 +1,57 @@
+#box{
+    color: white;
+    /* border: 2px solid white; */
+    height: 100px;
+    width: 400px;
+    font-size: 50px;
+    font-family: "clash Grotesk";
+    letter-spacing: 2px;
+    padding: 1rem 2.5rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 300;
+    transition: 0.6s;
+    box-shadow: 0px 0px 60px 0px hsl(232, 85%, 69%);
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+    padding: 8px;
+}
+#box:hover{
+    color: rgb(4, 4, 38);
+    background: linear-gradient(to right, #9cecfb, #65c7f7, #0052d4);
+    transition: 1s;
+}
+#in{
+    height: 100px;
+    width: 400px;
+    background-color: #111;
+    position: relative;
+    z-index: 99;
+}
+#box::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%) rotate(45deg);
+    height: 600px;
+    width: 200px;
+    background-color: rgba(150, 128, 128, 0.823);
+    animation: move 4s infinite;
+}
+@keyframes move {
+    100%{
+        transform: translate(-50% , -50%) rotate(225deg);
+    }            
+}
+#in:hover{
+    color: rgb(4, 4, 38);
+    background: linear-gradient(to right, #9cecfb, #65c7f7, #0052d4);
+    transition: 1s;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
